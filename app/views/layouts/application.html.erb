@@ -13,10 +13,10 @@
     <h3>Bookers</h3>
     <% if user_signed_in? %>
      <li>
-       <%= link_to "Home", new_user_registration_path %>
+       <%= link_to "Home", user_path(current_user.id) %>
      </li>
      <li>
-       <%= link_to "Users", user_path %>
+       <%= link_to "Users", user_path(current_user.id) %>
      </li>
      <li>
        <%= link_to "Books", books_path %>
