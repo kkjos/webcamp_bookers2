@@ -1,9 +1,14 @@
+<div class ="container">
+  <div class ="row">
+    <div class ="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+
+
 <div class = "errors">
     <% if @user.errors.any? %>
         <h3><%= @user.errors.count %>errors prohibited this obj from being saved:</h3>
              <ul><li>Name is too short (minimum is 2 characters)</li></ul>
     <% end %>
-        
+
 </div>
 
 
@@ -29,3 +34,4 @@
 
   <%= f.submit "Update User" %>
 <% end %>
+</div></div></div>

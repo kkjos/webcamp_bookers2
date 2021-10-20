@@ -1,6 +1,6 @@
 
 
-<div class = "container">
+<div class = "container px-5 px-sm-0">
     <div class = "errors">
       <% if @book.errors.any? %>
           <h3><%= @book.errors.count %>errors prohibited this obj from being saved:</h3>
@@ -14,9 +14,9 @@
 
     <%= render 'books/list', book: @book, user: @user %>
 
-        <div class = "col-md-8">
+        <div class = "col-md-8 offset-md-1">
            <h1>Books</h1>
-           <table>
+           <table class = "table table-hover table-inverse">
               <thead>
                 <tr>
                   <th colspan = "1"></th>
@@ -29,7 +29,7 @@
                 <tr>
                   <td>
                     <%= link_to user_path(book.user.id) do %>
-                      <%= attachment_image_tag book.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg"%>
+                      <%= attachment_image_tag book.user, :profile_image, :fill, 70, 70, fallback: "no_image.jpg"%>
                     <% end %>
                   </td>
                   <td>
